@@ -7,5 +7,3 @@ sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 cat /etc/hosts
 ruby -e "hosts = File.read('/etc/hosts').sub(/^::1\s*localhost.*$/, ''); File.write('/etc/hosts', hosts)"
 cat /etc/hosts
-
-cat /etc/services || ruby -e "File.write('/etc/services', 'ssh 22/tcp')"
